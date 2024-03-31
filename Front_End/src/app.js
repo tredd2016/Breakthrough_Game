@@ -3,7 +3,7 @@ const gameBoard = document.querySelector("#gameboard")
 const playerDisplay = document.querySelector("#player")
 const infoDisplay = document.querySelector("#info-display")
 
-const serverURL = 'http://192.168.1.8:8080/makeMove'
+const serverURL = 'http://localhost:5000/makeMove'
 
 const width = 8
 let playerGo = "white"

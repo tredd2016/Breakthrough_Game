@@ -1,0 +1,10 @@
+services:
+  web:
+    build: /Front_End/.
+    ports:
+      - "8080:80"
+
+  game_server:
+    build: /Game_Server/.
+    ports:
+      - "5000:9999"

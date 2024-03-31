@@ -45,10 +45,12 @@ int main() {
             // build out the game tree, N nodes deep.            
             tree<Game_Node> game_tree;
             tree<Game_Node>::iterator top = game_tree.set_head(root_node);
-            root_node.build_tree(game_tree, 2);      
+            
+            root_node.new_minimax(game_tree, top, 4);
+            //root_node.build_tree(game_tree, 4);      
             std::cout << "Num Nodes: " << game_tree.size() << std::endl;
-            root_node.calc_scores(game_tree);
-            root_node.test_print(game_tree);
+            //root_node.calc_scores(game_tree);
+            
 
             Move m = root_node.find_winning_move(game_tree);
             std::pair<int,int> to_make = root_node.translate_move(m);
@@ -71,7 +73,7 @@ int main() {
         
     });
 
-    app.port(8080).multithreaded().run();
+    app.port(9999).multithreaded().run();
 
     return 0;
 }

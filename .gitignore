@@ -1,4 +1,9 @@
 /Game_Server/build
+/Game_Server/crow
+/Game_Server/asio
+/Game_Server/tree.hh
+
+
 
 # Prerequisites
 *.d
